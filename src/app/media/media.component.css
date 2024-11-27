@@ -1,0 +1,46 @@
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #ba4a64; /* Color de texto en un tono más oscuro de rojo pastel */
+    margin-bottom: 20px;
+}
+
+label {
+    color: #ba4a64; /* Color de texto en un tono más oscuro de rojo pastel */
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    background-color: #f9d7dc; /* Fondo de input en color rojo pastel más claro */
+    border: 1px solid #ba4a64;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 80%; /* Ancho del input */
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ba4a64; /* Fondo del botón en un tono más oscuro de rojo pastel */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #a23c52; /* Fondo del botón al pasar el ratón en un tono más oscuro */
+    transform: translateY(-3px); /* Efecto de elevación al pasar el ratón */
+}
+
+#result {
+    margin-top: 20px;
+}
+
+p {
+    color: #ba4a64; /* Color del texto del resultado */
+}

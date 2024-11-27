@@ -1,21 +1,26 @@
-import { Media } from './media'
+import { Media } from './media';
+
 export class Stddev {
-    media: Media;
+  media: Media;
 
   constructor() {
     this.media = new Media();
   }
 
-  getStddev(dataList: string[], n: number): number {
+  getStddev(dataList: string, n: number): number {
     let desv = 0;
-    let arrData: number[] = new Array(n);
+    // Dividir la cadena en un array de números
+    let arrData = dataList.split(',').map(item => parseFloat(item.trim()));
 
-    for (let i = 0; i < n; i++) {
-      arrData[i] = parseFloat(dataList[i]);
+    // Asegurarse de que la longitud del array es la esperada
+    if (arrData.length !== n) {
+      console.error('La longitud de los datos no coincide con el valor n proporcionado.');
+      return 0;
     }
-    
+
+    // Calcular la desviación estándar
     for (let j = 0; j < n; j++) {
-      desv += Math.pow(arrData[j] - this.media.getMedia(dataList, n), 2);
+      desv += Math.pow(arrData[j] - this.media.getMedia(arrData, n), 2);
     }
 
     desv /= (n - 1);

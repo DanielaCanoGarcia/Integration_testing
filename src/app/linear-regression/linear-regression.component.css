@@ -1,0 +1,50 @@
+body {
+    background-color: #f8e1e7; /* Fondo en color rojo pastel */
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #f9c0c7; /* Color de fondo de la sección en rojo pastel */
+    width: 100%; /* Ocupa la parte izquierda de la pantalla */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #ba4a64; /* Color de texto en un tono más oscuro de rojo pastel */
+}
+
+label {
+    color: #ba4a64; /* Color de texto en un tono más oscuro de rojo pastel */
+}
+
+input {
+    background-color: #f9d7dc; /* Fondo de input en color rojo pastel más claro */
+    border: 1px solid #ba4a64;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #ba4a64; /* Fondo del botón en un tono más oscuro de rojo pastel */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 15px 0;
+}
+
+button:hover {
+    background-color: #a23c52; /* Fondo del botón al pasar el ratón en un tono más oscuro */
+}
+
+#result {
+    margin-top: 20px;
+}
+
+p {
+    color: #ba4a64; /* Color del texto del resultado */
+}

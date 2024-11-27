@@ -1,24 +1,34 @@
 import { Component } from '@angular/core';
-import { SimpsonIntegration } from '../classes/simpson';
+import { Simpson } from '../classes/simpson';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-simpson',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './simpson.component.html',
   styleUrl: './simpson.component.css'
 })
 export class SimpsonComponent {
 
-  private simpsonIntegration: SimpsonIntegration;
+  simp: Simpson;
+  fx: any;
+  x0 = 0;
+  x1 = 0;
+  seg = 0;
+  error = 0;
+  result: number | null = null;
 
-  constructor() {
-    this.simpsonIntegration = new SimpsonIntegration();
+  constructor(){
+    this.simp = new Simpson();
   }
 
-  // Ejemplo de uso de la función computeFinalValue
-  public calculate(): void {
-    const finalValue = this.simpsonIntegration.computeFinalValue(10, 0.01, 1, 5);
-    console.log('Final Value:', finalValue);
+  calculateSimp(fx: any, x0: number, x1: number, seg: number, error: number){
+    this.result = this.getArea(this.fx, this.x0, this.x1, this.seg, this.error);
   }
-  
+
+  getArea(fx: any, x0: number, x1: number, seg: number, error: number) {
+    return this.simp.area(fx, x0, x1, seg, error);
+  }
 }

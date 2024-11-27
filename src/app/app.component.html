@@ -1,1 +1,18 @@
-<router-outlet></router-outlet>
+<div class="main-container">
+  <aside class="sidebar">
+    <h3>Selecciona una opción</h3>
+    <nav>
+      <ul>
+        <li><a routerLink="/media" routerLinkActive="active" ariaCurrentWhenActive="page">media</a></li>
+        <li><a routerLink="/stddev" routerLinkActive="active" ariaCurrentWhenActive="page">desviación estándar</a></li>
+        <li><a routerLink="/linear-regression" routerLinkActive="active" ariaCurrentWhenActive="page">regresión lineal</a></li>
+        <li><a routerLink="/correlation" routerLinkActive="active" ariaCurrentWhenActive="page">correlación</a></li>
+        <li><a routerLink="/simpson" routerLinkActive="active" ariaCurrentWhenActive="page">simpson</a></li>
+        <li><a routerLink="/tstudent" routerLinkActive="active" ariaCurrentWhenActive="page">tstudent</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
+</div>

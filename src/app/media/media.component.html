@@ -1,1 +1,9 @@
-<p>media works!</p>
+<section class="container">
+  <h1>CALCULA TU MEDIA</h1>
+  <label for="arrayInput">Introduce tu lista de datos</label>
+  <input id="arrayInput" [(ngModel)]="datalist"/>
+  <button (click)="getMedia()">CALCULAR</button>
+  <div>
+    <p *ngIf="result !== 0">{{ result }}</p>
+  </div>
+</section>

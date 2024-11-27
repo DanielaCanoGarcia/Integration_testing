@@ -1,1 +1,10 @@
-<p>stddev works!</p>
+<section class="container">
+    <h1>CALCULA TU DESVIACIÓN ESTANDAR</h1>
+    <label for="arrayInput"></label>
+    <input id="arrayInput" [(ngModel)]="datalist"/>
+    <button (click)="getStddev()">CALCULAR</button>
+    <div>
+      <p *ngIf="result !== 0">{{ result }}</p>
+    </div>
+  </section>
+  

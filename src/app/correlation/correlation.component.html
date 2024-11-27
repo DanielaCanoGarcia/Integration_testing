@@ -1,23 +1,21 @@
 <section class="container">
-    <h1>CALCULA TU REGRESIÓN LINEAL</h1>
+    <h1>CORRELACIÓN</h1>
     <div id="imputs">
         <div id="data">
             <label for="arrayInput">ingresa tu primera lista de datos </label>
             <input id="arrayInput" [(ngModel)]="imputString1"/>
-
         </div>
         <div id="data">
             <label for="arrayInput">ingresa tu segunda lista de datos </label>
             <input id="arrayInput" [(ngModel)]="imputString2"/>
         </div>
         <div id="data">
-            <label for="arrayInput">X</label>
-            <input id="arrayInput" [(ngModel)]="inputX"/>
+            <button id="calculateRXY" (click)="calculateRXY(imputString1, imputString2)">CALCULAR RXY</button>
+        </div>
+        <div id="data">
+            <button id="calculateRR" (click)="calculateRR(imputString1, imputString2)">CALCULAR RR</button>
         </div>
     </div>
-    <button id="calculateB0" (click)="calculateB0(imputString1, imputString2)">CALCULAR B0</button>
-    <button id="calculateB1" (click)="calculateB1(imputString1, imputString2)">CALCULAR B1</button>
-    <button id="calculateYK" (click)="calculateYK(imputString1, imputString2, inputX)">CALCULAR YK</button>
     <div id="result">
         <p *ngIf="result !== null">{{ result }}</p>
     </div>
